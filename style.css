@@ -1,0 +1,178 @@
+.image-container {
+  position: relative;
+  width: 800%;
+  max-width: 1450px;
+  /* Ajustez la largeur selon vos besoins */
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #0e0d0d;
+  font-size: 40px;
+  font-weight: bold;
+}
+p {
+  font-size: 20px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #fff; /* Couleur de fond de la navbar */
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.navbar a {
+  color: #000; /* Couleur du texte de la navbar */
+  text-decoration: none;
+  padding: 15px;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Animation de transition de couleur */
+}
+
+.navbar a:hover {
+  color: #555; /* Couleur du texte au survol */
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+  background-color: #eceae6;
+}
+
+.about-section h2 {
+  color: #333;
+}
+
+.about-section p {
+  color: #666;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.about-section img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.image-grid img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.dual-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse; /* Inversion de l'ordre des éléments sur un écran étroit */
+  background-color: #eceae6;
+}
+
+.dual-section div {
+  flex-basis: calc(50% - 20px);
+}
+
+.dual-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.projects-section {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+.navbar-brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: #f9f5f5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #2980b9;
+}

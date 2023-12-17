@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>design interieur</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Accueil</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="image-container">
+      <img src="result.jpg" alt="Votre Image" />
+      <div class="overlay-text">
+        <h2>Architecte d'intérieur</h2>
+        <p>Bienvenue chez Notre Agence de Design d'Intérieur</p>
+        <p>Transformez votre espace avec style et élégance.</p>
+      </div>
+    </div>
+    <br />
+    <section class="projects-section">
+      <p>
+        Votre confiance en notre expertise est la plus grande reconnaissance de
+        notre travail acharné et de notre dévouement à créer des espaces qui
+        dépassent vos attentes. Nous sommes ravis d'avoir eu l'opportunité de
+        donner vie à votre vision, et nous sommes impatients de partager
+        ensemble ce voyage passionnant à travers le monde du design.
+      </p>
+      <a href="contact.html" class="cta-button">Contactez-nous</a>
+    </section>
+    <br />
+    <br />
+    <div class="image-grid">
+      <img src="1.jpg" alt="Image 1" />
+      <img src="2.jpg" alt="Image 2" />
+      <img src="3.jpg" alt="Image 3" />
+      <img src="image.jpeg" alt="Image 4" />
+    </div>
+    <br />
+    <br />
+    <br />
+    <section class="dual-section">
+      <div>
+        <h2>Qu'est-ce que l'architecture d'intérieur ?</h2>
+        <p>
+          L'architecture d'intérieur consiste à concevoir et aménager des
+          espaces intérieurs de manière fonctionnelle, esthétique et
+          confortable. Les architectes d'intérieur jouent avec les volumes, la
+          lumière, le mobilier et les matériaux pour créer des environnements
+          uniques, tout en tenant compte des contraintes techniques et
+          budgétaires.
+        </p>
+      </div>
+
+      <img src="12.jpeg" alt="Autre Image" />
+    </section>
+    <section class="projects-section">
+      <h2>Découvrez nos projets</h2>
+      <p>
+        En phase de conception détaillée, nous serons le chef d'orchestre qui
+        saura mettre en musique tous les corps d'état de votre projet
+        d'architecture d'intérieur. Nous rédigerons des pièces graphiques très
+        précises, appuyées par des conseils de spécialistes de la décoration et
+        du design intérieur, lorsque cela s'avère nécessaire. Cette conception
+        très détaillée permettra de réaliser une consultation d'entreprises
+        totalement transparente et au service de l'optimisation de votre budget.
+      </p>
+      <a href="contact.html" class="cta-button">Contactez-nous</a>
+    </section>
+    <div class="image-grid">
+      <img src="13.jpg" alt="Image 1" />
+      <img src="14.jpeg" alt="Image 2" />
+      <img src="15.jpeg" alt="Image 3" />
+      <img src="16.jpeg" alt="Image 4" />
+    </div>
+    <center><h1>About Us</h1></center>
+    <div class="about-section">
+      <p>
+        Bienvenue dans notre cabinet d'architecture ! Nous sommes passionnés par
+        la création d'espaces innovants et fonctionnels qui inspirent. Avec une
+        équipe d'architectes et de designers talentueux, nous donnons vie à des
+        rêves. Notre engagement est de livrer des conceptions exceptionnelles
+        adaptées à votre vision unique.
+      </p>
+      <img src="5.jpg" alt="Image" />
+    </div>
+    <div class="footer">
+      <p>&copy; 2023 Votre Site. Tous droits réservés.</p>
+      <p>
+        <a href="#">Mentions légales</a> |
+        <a href="#">Politique de confidentialité</a> |
+        <a href="#">Conditions d'utilisation</a>
+      </p>
+    </div>
+    <button id="scrollToTopBtn">Remonter en haut</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Affichez le bouton lorsque l'utilisateur fait défiler la page vers le bas
+        window.addEventListener("scroll", function () {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            scrollToTopBtn.style.display = "block";
+          } else {
+            scrollToTopBtn.style.display = "none";
+          }
+        });
+
+        scrollToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
