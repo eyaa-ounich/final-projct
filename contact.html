@@ -115,21 +115,48 @@
         font-size: 20px;
       }
       .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
 
-    .footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-    }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+      }
 
-    .footer a:hover {
-      text-decoration: underline;
-    }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      .image-container {
+        position: relative;
+        width: 800%;
+        max-width: 1450px;
+        /* Ajustez la largeur selon vos besoins */
+        margin: auto;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #0e0d0d;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
@@ -140,19 +167,35 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="image-container">
-        <img src="result.jpg" alt="Votre Image" />
-        
+      <img src="result.jpg" alt="Votre Image" />
+      <div class="overlay-text">
+        <h2>Architecte d'intérieur</h2>
+        <p>Bienvenue chez Notre Agence de Design d'Intérieur</p>
+        <p>Transformez votre espace avec style et élégance.</p>
+      </div>
+    </div>
     <div class="container">
-      <form>
+      <form onsubmit="test(); return false;">
         <!-- Votre formulaire ici -->
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" /><br />
+        <label for="inputName">Nom :</label>
+        <input type="text" id="inputName" name="inputName" />
+        <div id="nom"></div>
+        <br />
 
-        <label for="email">E-mail :</label>
-        <input type="email" id="email" name="email" /><br />
+        <label for="inputEmail">E-mail :</label>
+        <input type="email" id="inputEmail" name="inputEmail" />
+        <div id="email-c"></div>
+        <br />
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message"></textarea><br />
+        <label for="inputnumber">Numéro :</label>
+        <input type="text" id="inputnumber" name="inputnumber" />
+        <div id="number"></div>
+        <br />
+
+        <label for="inputcomment">Commentaire :</label>
+        <textarea id="inputcomment" name="inputcomment"></textarea>
+        <div id="comment"></div>
+        <br />
 
         <button type="submit">Envoyer</button>
       </form>
@@ -172,36 +215,67 @@
       </div>
     </div>
     <div class="footer">
-        <p>&copy; 2023 Votre Site. Tous droits réservés.</p>
-        <p>
-          <a href="#">Mentions légales</a> |
-          <a href="#">Politique de confidentialité</a> |
-          <a href="#">Conditions d'utilisation</a>
-        </p>
-      </div>
-      <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('form');
-      
-        form.addEventListener('submit', function (event) {
-          event.preventDefault();
-      
-          
-          const nom = document.getElementById('nom').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-      
-          
-          if (nom === '' || email === '' || message === '') {
-            alert('Veuillez remplir tous les champs du formulaire.');
-          } else {
-           
-            alert('Formulaire envoyé avec succès!');
-          }
-        });
-      });
-      /////////////////////////////////////////////
-      
+      <p>&copy; 2023 Votre Site. Tous droits réservés.</p>
+      <p>
+        <a href="#">Mentions légales</a> |
+        <a href="#">Politique de confidentialité</a> |
+        <a href="#">Conditions d'utilisation</a>
+      </p>
+    </div>
+    <script>
+      function test() {
+        var mail = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})$/;
+        var letters = /^[A-Za-z]+$/;
+
+        var nom = document.getElementById("inputName").value;
+        var email = document.getElementById("inputEmail").value;
+        var num = document.getElementById("inputnumber").value;
+
+        var comment = document.getElementById("inputcomment").value;
+
+        var errorN = document.getElementById("nom");
+        var errorE = document.getElementById("email-c");
+        var errornb = document.getElementById("number");
+
+        var errorc = document.getElementById("comment");
+
+        if (nom == "") {
+          errorN.innerHTML =
+            '<p style="color:red">Veuillez entrer votre nom!</p>';
+        } else if (!(nom.match(letters) && nom.charAt(0).match(/^[A-Z]+$/))) {
+          errorN.innerHTML =
+            '<p style="color:red">Veuillez entrer un nom valid!</p>';
+        } else {
+          errorN.innerHTML = "";
+        }
+
+        if (email == "") {
+          errorE.innerHTML =
+            '<p style="color:red">Veuillez entrer votre Email!</p>';
+        } else if (!email.match(mail)) {
+          errorE.innerHTML =
+            '<p style="color:red">Veuillez entrer un Email valid!!</p>';
+        } else {
+          errorE.innerHTML = "";
+        }
+
+        if (num == "") {
+          errornb.innerHTML =
+            '<p style="color:red">Veuillez entrer votre Numero!</p>';
+        } else if (!num.match(/^\d{8}$/)) {
+          errornb.innerHTML =
+            '<p style="color:red">Veuillez entrer un Numero valid!!</p>';
+        } else {
+          errornb.innerHTML = "";
+        }
+
+        if (comment == "") {
+          errorc.innerHTML =
+            '<p style="color:red">Veuillez ajouter votre Commentaire!</p>';
+        } else {
+          errorc.innerHTML = "";
+        }
+      }
     </script>
   </body>
 </html>
